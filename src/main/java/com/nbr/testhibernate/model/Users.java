@@ -5,10 +5,15 @@
  */
 package com.nbr.testhibernate.model;
 
+import javax.persistence.Id;
+import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.Table;
+
 /**
  *
  * @author brazhnik
  */
+@DynamicUpdate
 public class Users {
 private Long  id;
 private String  login;

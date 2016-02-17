@@ -5,10 +5,14 @@
  */
 package com.nbr.testhibernate.classes;
 
+import java.io.Serializable;
+import org.hibernate.annotations.DynamicUpdate;
+
 /**
  *
  * @author brazhnik
  */
+
 public class MainClass {
 
     public static void main(String[] args) {

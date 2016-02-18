@@ -16,8 +16,15 @@ import org.hibernate.annotations.DynamicUpdate;
 public class MainClass {
 
     public static void main(String[] args) {
-        System.out.println("Start...");
-        
+      MainFrame mf = new MainFrame();
+      
+      mf.setVisible(true);
+      
+    
+      
+
+
+    //System.out.println("Start...");
         
     }
 }

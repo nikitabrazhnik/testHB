@@ -5,22 +5,38 @@
  */
 package com.nbr.testhibernate.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.Table;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 /**
  *
  * @author brazhnik
  */
-@DynamicUpdate
-public class Users {
-private Long  id;
-private String  login;
-private String  name;
-private String  email;
-private String  loginType; /*1-email; 2-facebook; 3-google; 4-vk */
+@Entity
+@Table(name = "Users", uniqueConstraints = {
+    @UniqueConstraint(columnNames = {"id"})})
 
+public class Users {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, unique = true, length = 11)
+    private Long id;
+    @Column(name = "login", nullable = false, unique = true, length = 50)
+    private String login;
+    @Column(name = "name", nullable = true, unique = false, length = 50)
+    private String name;
+    @Column(name = "email", nullable = false, unique = true, length = 150)
+    private String email;
+    @Column(name = "loginType", nullable = false, unique = false, length = 10)
+    private String loginType;
+
+    /*1-email; 2-facebook; 3-google; 4-vk */
     public Long getId() {
         return id;
     }
@@ -61,16 +77,4 @@ private String  loginType; /*1-email; 2-facebook; 3-google; 4-vk */
         this.loginType = loginType;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-    
 }

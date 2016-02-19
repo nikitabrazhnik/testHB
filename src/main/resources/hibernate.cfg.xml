@@ -7,5 +7,6 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/nbr?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">007008009</property>
+    <property name="hibernate.connection.pool_size">1</property>
   </session-factory>
 </hibernate-configuration>

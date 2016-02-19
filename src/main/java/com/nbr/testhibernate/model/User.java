@@ -18,10 +18,10 @@ import javax.persistence.UniqueConstraint;
  * @author brazhnik
  */
 @Entity
-@Table(name = "Users", uniqueConstraints = {
+@Table(name = "User", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"id"})})
 
-public class Users {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

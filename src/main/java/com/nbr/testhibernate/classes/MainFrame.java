@@ -5,6 +5,13 @@
  */
 package com.nbr.testhibernate.classes;
 
+import com.nbr.testhibernate.controller.DAOclass;
+import com.nbr.testhibernate.model.User;
+import java.util.Random;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
 /**
  *
  * @author brazhnik
@@ -65,6 +72,9 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
